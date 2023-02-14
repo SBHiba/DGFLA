@@ -1,0 +1,49 @@
+name: Sync AZ WorkItem to Issues
+on:
+  schedule:
+    - cron: '0 18 * * *'  
+
+jobs:
+  migrate:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@main
+      
+      - uses: tibdex/github-app-token@v1
+        id: get_installation_token
+        with: 
+          app_id: 215629
+          installation_id: 26952416
+          private_key: ${{ secrets.GHAPP_PRIVATE_KEY }}
+      
+      - name: run Batch
+        shell: pwsh
+        run: |
+          # SET GITHUB REPO_NAME
+          
+          $RepoName="DGFLA"
+        
+          # run migration script
+          
+          # cleaning up bools
+          $gh_update_assigned_to=$false
+          $gh_add_ado_comments=$false
+          
+          #if("${{ github.event.inputs.gh_update_assigned_to }}" -eq "true") {
+            $gh_update_assigned_to=$true
+          #}
+          
+          #if("${{ github.event.inputs.gh_add_ado_comments }}" -eq "true") {
+            $gh_add_ado_comments=$true
+          #}
+          
+          $adoproject = "${{ SECRETS.ADO_PROJECT }}"
+          $adoareapath = "${{ SECRETS.ADO_PROJECT }}"
+          
+          write-host $RepoName
+          
+          #${{ github.event.inputs.gh-repo }}
+          
+          ./ado_workitems_to_github_issues.ps1 -ado_pat "${{ SECRETS.ADO_PERSONAL_ACCESS_TOKEN }}" -ado_org "${{ SECRETS.ADO_ORGANIZATION }}" -ado_project $adoproject -ado_area_path $adoareapath -gh_pat "${{ SECRETS.GH_PERSONAL_ACCESS_TOKEN }}" -gh_org "${{ SECRETS.ADO_ORGANIZATION }}" -gh_repo $RepoName -gh_update_assigned_to $gh_update_assigned_to -gh_add_ado_comments $gh_add_ado_comments
+          

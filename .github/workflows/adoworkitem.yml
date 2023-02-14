@@ -1,0 +1,74 @@
+name: Manual Batch Work Items
+
+on:
+  workflow_dispatch:
+    inputs: 
+      ado-org:
+        description: 'ado-org'
+        required: true
+        default: 's-bconsulting'
+      ado-project:
+        description: 'ado-project'
+        required: true
+        default: 'Lettering Third Account'
+      ado-tag:
+        description: 'ADO tag to migrate'
+        required: true
+        default: 'Lettering Third Account'
+      gh-org:
+        description: 'gh-org'
+        required: true
+        default: 's-bconsulting'
+      gh-repo:
+        description: 'gh-org'
+        required: true
+        default: 'SyncDevOpsGitHub'
+      gh_update_assigned_to:
+        description: 'Update Assigned To'
+        required: true
+        type: boolean
+        default: 'true'
+      gh_add_ado_comments:
+        description: 'Add ADO Comments'
+        required: true
+        type: boolean
+        default: 'true'
+
+jobs:
+  migrate:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@main
+      
+      - uses: tibdex/github-app-token@v1
+        id: get_installation_token
+        with: 
+          app_id: 215629
+          installation_id: 26952416
+          private_key: ${{ secrets.GHAPP_PRIVATE_KEY }}
+      
+      - name: run migration
+        shell: pwsh
+        run: |
+          # run migration script
+          
+          # cleaning up bools
+          $gh_update_assigned_to=$false
+          $gh_add_ado_comments=$false
+          
+          if("${{ github.event.inputs.gh_update_assigned_to }}" -eq "true") {
+            $gh_update_assigned_to=$true
+          }
+          
+          if("${{ github.event.inputs.gh_add_ado_comments }}" -eq "true") {
+            $gh_add_ado_comments=$true
+          }
+          
+          $adoproject = "${{ SECRETS.ADO_PROJECT }}"
+          $adoareapath = "${{ SECRETS.ADO_PROJECT }}"
+          
+          #${{ github.event.inputs.gh-repo }}
+          
+          ./ado_workitems_to_github_issues.ps1 -ado_pat "${{ SECRETS.ADO_PERSONAL_ACCESS_TOKEN }}" -ado_org "${{ github.event.inputs.ado-org }}" -ado_project $adoproject -ado_area_path $adoareapath -gh_pat "${{ SECRETS.GH_PERSONAL_ACCESS_TOKEN }}" -gh_org "${{ github.event.inputs.gh-org }}" -gh_repo "${{ github.event.repository.name }}" -gh_update_assigned_to $gh_update_assigned_to -gh_assigned_to_user_suffix "${{ github.event.inputs.gh_assigned_to_user_suffix }}" -gh_add_ado_comments $gh_add_ado_comments
+          

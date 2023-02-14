@@ -1,0 +1,1567 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:DataSourceID>7b6e3577-fe17-416c-93ef-2cef30f1c894</rd:DataSourceID>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <ReportItems>
+          <Tablix Name="TablixPartner">
+            <TablixCorner>
+              <TablixCornerRows>
+                <TablixCornerRow>
+                  <TablixCornerCell>
+                    <CellContents>
+                      <Textbox Name="Textbox3">
+                        <CanGrow>true</CanGrow>
+                        <KeepTogether>true</KeepTogether>
+                        <Paragraphs>
+                          <Paragraph>
+                            <TextRuns>
+                              <TextRun>
+                                <Value>=Parameters!CustomerLbl.Value</Value>
+                                <Style>
+                                  <FontSize>8pt</FontSize>
+                                  <FontWeight>Bold</FontWeight>
+                                  <Color>=Parameters!FontColour1.Value</Color>
+                                </Style>
+                              </TextRun>
+                              <TextRun>
+                                <Value> / </Value>
+                                <Style>
+                                  <FontSize>8pt</FontSize>
+                                  <FontWeight>Bold</FontWeight>
+                                  <Color>=Parameters!FontColour1.Value</Color>
+                                </Style>
+                              </TextRun>
+                              <TextRun>
+                                <Value>=Parameters!MatterLbl.Value</Value>
+                                <Style>
+                                  <FontSize>8pt</FontSize>
+                                  <FontWeight>Bold</FontWeight>
+                                  <Color>=Parameters!FontColour1.Value</Color>
+                                </Style>
+                              </TextRun>
+                            </TextRuns>
+                            <Style>
+                              <TextAlign>Center</TextAlign>
+                            </Style>
+                          </Paragraph>
+                        </Paragraphs>
+                        <rd:DefaultName>Textbox3</rd:DefaultName>
+                        <Style>
+                          <Border>
+                            <Color>LightGrey</Color>
+                            <Style>Solid</Style>
+                          </Border>
+                          <BackgroundColor>=Parameters!Colour1.Value</BackgroundColor>
+                          <VerticalAlign>Middle</VerticalAlign>
+                          <PaddingLeft>2pt</PaddingLeft>
+                          <PaddingRight>2pt</PaddingRight>
+                        </Style>
+                      </Textbox>
+                      <RowSpan>2</RowSpan>
+                    </CellContents>
+                  </TablixCornerCell>
+                </TablixCornerRow>
+                <TablixCornerRow>
+                  <TablixCornerCell />
+                </TablixCornerRow>
+              </TablixCornerRows>
+            </TablixCorner>
+            <TablixBody>
+              <TablixColumns>
+                <TablixColumn>
+                  <Width>3.5cm</Width>
+                </TablixColumn>
+              </TablixColumns>
+              <TablixRows>
+                <TablixRow>
+                  <Height>0.8cm</Height>
+                  <TablixCells>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="BoniMaliCumulAmt">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Sum(Fields!BoniMaliCumulAmt.Value)</Value>
+                                  <Style>
+                                    <FontSize>8pt</FontSize>
+                                    <FontWeight>SemiBold</FontWeight>
+                                    <Format>#,0.00</Format>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>BoniMaliCumulAmt</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <VerticalAlign>Middle</VerticalAlign>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                  </TablixCells>
+                </TablixRow>
+                <TablixRow>
+                  <Height>0.5cm</Height>
+                  <TablixCells>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox11">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Fields!BoniMaliCumulAmt.Value</Value>
+                                  <Style>
+                                    <FontSize>7pt</FontSize>
+                                    <Format>#,0.00</Format>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox11</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <LeftBorder>
+                              <Style>None</Style>
+                            </LeftBorder>
+                            <VerticalAlign>Middle</VerticalAlign>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                  </TablixCells>
+                </TablixRow>
+                <TablixRow>
+                  <Height>0.6cm</Height>
+                  <TablixCells>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox105">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value />
+                                  <Style>
+                                    <FontSize>7pt</FontSize>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox105</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>None</Style>
+                            </Border>
+                            <VerticalAlign>Middle</VerticalAlign>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                  </TablixCells>
+                </TablixRow>
+                <TablixRow>
+                  <Height>0.6cm</Height>
+                  <TablixCells>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="ProvisionAmt">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Sum(Fields!ProvisionAmt.Value)</Value>
+                                  <Style>
+                                    <FontSize>8pt</FontSize>
+                                    <FontWeight>Bold</FontWeight>
+                                    <Format>#,0.00</Format>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>ProvisionAmt</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <VerticalAlign>Middle</VerticalAlign>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                  </TablixCells>
+                </TablixRow>
+                <TablixRow>
+                  <Height>0.6cm</Height>
+                  <TablixCells>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox46">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Sum(Fields!BoniMaliCumulAmt.Value)</Value>
+                                  <Style>
+                                    <FontSize>8pt</FontSize>
+                                    <FontWeight>Bold</FontWeight>
+                                    <Format>#,0.00</Format>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox46</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <VerticalAlign>Middle</VerticalAlign>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                  </TablixCells>
+                </TablixRow>
+                <TablixRow>
+                  <Height>0.6cm</Height>
+                  <TablixCells>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox48">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Sum(Fields!BoniMaliCumulAmt.Value)</Value>
+                                  <Style>
+                                    <FontSize>7pt</FontSize>
+                                    <Format>#,0.00</Format>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox48</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <VerticalAlign>Middle</VerticalAlign>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                  </TablixCells>
+                </TablixRow>
+              </TablixRows>
+            </TablixBody>
+            <TablixColumnHierarchy>
+              <TablixMembers>
+                <TablixMember>
+                  <TablixHeader>
+                    <Size>0.5cm</Size>
+                    <CellContents>
+                      <Textbox Name="Textbox6">
+                        <CanGrow>true</CanGrow>
+                        <KeepTogether>true</KeepTogether>
+                        <Paragraphs>
+                          <Paragraph>
+                            <TextRuns>
+                              <TextRun>
+                                <Value>Boni / Mali</Value>
+                                <Style>
+                                  <FontSize>8pt</FontSize>
+                                  <FontWeight>SemiBold</FontWeight>
+                                  <Color>=Parameters!FontColour1.Value</Color>
+                                </Style>
+                              </TextRun>
+                            </TextRuns>
+                            <Style>
+                              <TextAlign>Center</TextAlign>
+                            </Style>
+                          </Paragraph>
+                        </Paragraphs>
+                        <rd:DefaultName>Textbox6</rd:DefaultName>
+                        <Style>
+                          <Border>
+                            <Color>LightGrey</Color>
+                            <Style>Solid</Style>
+                          </Border>
+                          <BottomBorder>
+                            <Style>None</Style>
+                          </BottomBorder>
+                          <BackgroundColor>=Parameters!Colour1.Value</BackgroundColor>
+                          <VerticalAlign>Middle</VerticalAlign>
+                          <PaddingLeft>2pt</PaddingLeft>
+                          <PaddingRight>2pt</PaddingRight>
+                        </Style>
+                      </Textbox>
+                    </CellContents>
+                  </TablixHeader>
+                  <TablixMembers>
+                    <TablixMember>
+                      <TablixHeader>
+                        <Size>0.5cm</Size>
+                        <CellContents>
+                          <Textbox Name="Textbox51">
+                            <CanGrow>true</CanGrow>
+                            <KeepTogether>true</KeepTogether>
+                            <Paragraphs>
+                              <Paragraph>
+                                <TextRuns>
+                                  <TextRun>
+                                    <Value>[</Value>
+                                    <Style>
+                                      <FontSize>7pt</FontSize>
+                                      <FontWeight>SemiBold</FontWeight>
+                                      <Color>=Parameters!FontColour1.Value</Color>
+                                    </Style>
+                                  </TextRun>
+                                  <TextRun>
+                                    <Value>=Fields!StartCumulPeriod.Value</Value>
+                                    <Style>
+                                      <FontSize>7pt</FontSize>
+                                      <FontWeight>SemiBold</FontWeight>
+                                      <Format>d</Format>
+                                      <Color>=Parameters!FontColour1.Value</Color>
+                                    </Style>
+                                  </TextRun>
+                                  <TextRun>
+                                    <Value>...</Value>
+                                    <Style>
+                                      <FontSize>7pt</FontSize>
+                                      <FontWeight>SemiBold</FontWeight>
+                                      <Format>d</Format>
+                                      <Color>=Parameters!FontColour1.Value</Color>
+                                    </Style>
+                                  </TextRun>
+                                  <TextRun>
+                                    <Value>=Fields!EndBillingPeriod.Value</Value>
+                                    <Style>
+                                      <FontSize>7pt</FontSize>
+                                      <FontWeight>SemiBold</FontWeight>
+                                      <Format>d</Format>
+                                      <Color>=Parameters!FontColour1.Value</Color>
+                                    </Style>
+                                  </TextRun>
+                                  <TextRun>
+                                    <Value>]</Value>
+                                    <Style>
+                                      <FontSize>7pt</FontSize>
+                                      <FontWeight>SemiBold</FontWeight>
+                                      <Format>d</Format>
+                                      <Color>=Parameters!FontColour1.Value</Color>
+                                    </Style>
+                                  </TextRun>
+                                </TextRuns>
+                                <Style>
+                                  <TextAlign>Center</TextAlign>
+                                </Style>
+                              </Paragraph>
+                            </Paragraphs>
+                            <rd:DefaultName>Textbox51</rd:DefaultName>
+                            <Style>
+                              <Border>
+                                <Color>LightGrey</Color>
+                                <Style>Solid</Style>
+                              </Border>
+                              <TopBorder>
+                                <Style>None</Style>
+                              </TopBorder>
+                              <BackgroundColor>=Parameters!Colour1.Value</BackgroundColor>
+                              <VerticalAlign>Middle</VerticalAlign>
+                              <PaddingLeft>2pt</PaddingLeft>
+                              <PaddingRight>2pt</PaddingRight>
+                            </Style>
+                          </Textbox>
+                        </CellContents>
+                      </TablixHeader>
+                    </TablixMember>
+                  </TablixMembers>
+                </TablixMember>
+              </TablixMembers>
+            </TablixColumnHierarchy>
+            <TablixRowHierarchy>
+              <TablixMembers>
+                <TablixMember>
+                  <Group Name="SellToCustGrp">
+                    <GroupExpressions>
+                      <GroupExpression>=Fields!Sell_to_Customer_No_.Value</GroupExpression>
+                    </GroupExpressions>
+                    <PageBreak>
+                      <BreakLocation>Between</BreakLocation>
+                    </PageBreak>
+                  </Group>
+                  <SortExpressions>
+                    <SortExpression>
+                      <Value>=Fields!PartnerNo_.Value</Value>
+                    </SortExpression>
+                  </SortExpressions>
+                  <TablixMembers>
+                    <TablixMember>
+                      <TablixHeader>
+                        <Size>10cm</Size>
+                        <CellContents>
+                          <Textbox Name="Sell_to_Customer_No_2">
+                            <CanGrow>true</CanGrow>
+                            <KeepTogether>true</KeepTogether>
+                            <Paragraphs>
+                              <Paragraph>
+                                <TextRuns>
+                                  <TextRun>
+                                    <Value>=Fields!Sell_to_Customer_No_.Value</Value>
+                                    <Style>
+                                      <FontSize>8pt</FontSize>
+                                      <FontWeight>Bold</FontWeight>
+                                    </Style>
+                                  </TextRun>
+                                  <TextRun>
+                                    <Value> - </Value>
+                                    <Style>
+                                      <FontSize>8pt</FontSize>
+                                      <FontWeight>Bold</FontWeight>
+                                    </Style>
+                                  </TextRun>
+                                  <TextRun>
+                                    <Value>=Fields!Sell_to_Customer_Name.Value</Value>
+                                    <Style>
+                                      <FontSize>8pt</FontSize>
+                                      <FontWeight>Bold</FontWeight>
+                                    </Style>
+                                  </TextRun>
+                                </TextRuns>
+                                <Style>
+                                  <TextAlign>Left</TextAlign>
+                                </Style>
+                              </Paragraph>
+                            </Paragraphs>
+                            <rd:DefaultName>Sell_to_Customer_No_</rd:DefaultName>
+                            <Style>
+                              <Border>
+                                <Color>LightGrey</Color>
+                                <Style>Solid</Style>
+                              </Border>
+                              <VerticalAlign>Middle</VerticalAlign>
+                              <PaddingLeft>2pt</PaddingLeft>
+                              <PaddingRight>2pt</PaddingRight>
+                            </Style>
+                          </Textbox>
+                        </CellContents>
+                      </TablixHeader>
+                      <TablixMembers>
+                        <TablixMember />
+                      </TablixMembers>
+                    </TablixMember>
+                    <TablixMember>
+                      <Group Name="MatterGrp">
+                        <GroupExpressions>
+                          <GroupExpression>=Fields!Matter_No_.Value</GroupExpression>
+                        </GroupExpressions>
+                      </Group>
+                      <SortExpressions>
+                        <SortExpression>
+                          <Value>=Fields!Matter_No_.Value</Value>
+                        </SortExpression>
+                      </SortExpressions>
+                      <TablixMembers>
+                        <TablixMember>
+                          <TablixHeader>
+                            <Size>10cm</Size>
+                            <CellContents>
+                              <Textbox Name="Textbox19">
+                                <CanGrow>true</CanGrow>
+                                <KeepTogether>true</KeepTogether>
+                                <Paragraphs>
+                                  <Paragraph>
+                                    <TextRuns>
+                                      <TextRun>
+                                        <Label>Matter</Label>
+                                        <Value>=Fields!Matter_No_.Value</Value>
+                                        <Style>
+                                          <FontSize>7pt</FontSize>
+                                        </Style>
+                                      </TextRun>
+                                      <TextRun>
+                                        <Value> - </Value>
+                                        <Style>
+                                          <FontSize>7pt</FontSize>
+                                        </Style>
+                                      </TextRun>
+                                      <TextRun>
+                                        <Value>=Fields!MatterName.Value</Value>
+                                        <Style>
+                                          <FontSize>7pt</FontSize>
+                                        </Style>
+                                      </TextRun>
+                                    </TextRuns>
+                                    <Style />
+                                  </Paragraph>
+                                </Paragraphs>
+                                <rd:DefaultName>Textbox19</rd:DefaultName>
+                                <Style>
+                                  <Border>
+                                    <Color>LightGrey</Color>
+                                    <Style>Solid</Style>
+                                  </Border>
+                                  <VerticalAlign>Middle</VerticalAlign>
+                                  <PaddingLeft>10pt</PaddingLeft>
+                                  <PaddingRight>2pt</PaddingRight>
+                                </Style>
+                              </Textbox>
+                            </CellContents>
+                          </TablixHeader>
+                          <TablixMembers>
+                            <TablixMember />
+                          </TablixMembers>
+                        </TablixMember>
+                      </TablixMembers>
+                    </TablixMember>
+                    <TablixMember>
+                      <TablixHeader>
+                        <Size>10cm</Size>
+                        <CellContents>
+                          <Textbox Name="Textbox94">
+                            <CanGrow>true</CanGrow>
+                            <KeepTogether>true</KeepTogether>
+                            <Paragraphs>
+                              <Paragraph>
+                                <TextRuns>
+                                  <TextRun>
+                                    <Value />
+                                    <Style>
+                                      <FontSize>7pt</FontSize>
+                                    </Style>
+                                  </TextRun>
+                                </TextRuns>
+                                <Style />
+                              </Paragraph>
+                            </Paragraphs>
+                            <rd:DefaultName>Textbox94</rd:DefaultName>
+                            <Style>
+                              <Border>
+                                <Color>LightGrey</Color>
+                                <Style>None</Style>
+                              </Border>
+                              <VerticalAlign>Middle</VerticalAlign>
+                              <PaddingLeft>10pt</PaddingLeft>
+                              <PaddingRight>2pt</PaddingRight>
+                            </Style>
+                          </Textbox>
+                        </CellContents>
+                      </TablixHeader>
+                      <KeepWithGroup>After</KeepWithGroup>
+                    </TablixMember>
+                    <TablixMember>
+                      <TablixHeader>
+                        <Size>10cm</Size>
+                        <CellContents>
+                          <Textbox Name="Textbox2">
+                            <CanGrow>true</CanGrow>
+                            <KeepTogether>true</KeepTogether>
+                            <Paragraphs>
+                              <Paragraph>
+                                <TextRuns>
+                                  <TextRun>
+                                    <Value>Provision (facture, déduction)</Value>
+                                    <Style>
+                                      <FontSize>8pt</FontSize>
+                                      <FontWeight>SemiBold</FontWeight>
+                                      <Color>=Parameters!FontColour1.Value</Color>
+                                    </Style>
+                                  </TextRun>
+                                </TextRuns>
+                                <Style>
+                                  <TextAlign>Right</TextAlign>
+                                </Style>
+                              </Paragraph>
+                            </Paragraphs>
+                            <rd:DefaultName>Textbox2</rd:DefaultName>
+                            <Style>
+                              <Border>
+                                <Color>LightGrey</Color>
+                                <Style>Solid</Style>
+                              </Border>
+                              <BackgroundColor>=Parameters!Colour1.Value</BackgroundColor>
+                              <VerticalAlign>Middle</VerticalAlign>
+                              <PaddingLeft>10pt</PaddingLeft>
+                              <PaddingRight>10pt</PaddingRight>
+                            </Style>
+                          </Textbox>
+                        </CellContents>
+                      </TablixHeader>
+                      <KeepWithGroup>After</KeepWithGroup>
+                    </TablixMember>
+                    <TablixMember>
+                      <TablixHeader>
+                        <Size>10cm</Size>
+                        <CellContents>
+                          <Textbox Name="Textbox106">
+                            <CanGrow>true</CanGrow>
+                            <KeepTogether>true</KeepTogether>
+                            <Paragraphs>
+                              <Paragraph>
+                                <TextRuns>
+                                  <TextRun>
+                                    <Value>Boni / Mali (cumul)</Value>
+                                    <Style>
+                                      <FontSize>8pt</FontSize>
+                                      <FontWeight>SemiBold</FontWeight>
+                                      <Color>=Parameters!FontColour1.Value</Color>
+                                    </Style>
+                                  </TextRun>
+                                </TextRuns>
+                                <Style>
+                                  <TextAlign>Right</TextAlign>
+                                </Style>
+                              </Paragraph>
+                            </Paragraphs>
+                            <rd:DefaultName>Textbox106</rd:DefaultName>
+                            <Style>
+                              <Border>
+                                <Color>LightGrey</Color>
+                                <Style>Solid</Style>
+                              </Border>
+                              <BackgroundColor>=Parameters!Colour1.Value</BackgroundColor>
+                              <VerticalAlign>Middle</VerticalAlign>
+                              <PaddingLeft>10pt</PaddingLeft>
+                              <PaddingRight>10pt</PaddingRight>
+                            </Style>
+                          </Textbox>
+                        </CellContents>
+                      </TablixHeader>
+                      <KeepWithGroup>After</KeepWithGroup>
+                    </TablixMember>
+                    <TablixMember>
+                      <Group Name="PartnerNo_">
+                        <GroupExpressions>
+                          <GroupExpression>=Fields!PartnerNo_.Value</GroupExpression>
+                        </GroupExpressions>
+                      </Group>
+                      <SortExpressions>
+                        <SortExpression>
+                          <Value>=Fields!PartnerNo_.Value</Value>
+                        </SortExpression>
+                      </SortExpressions>
+                      <TablixMembers>
+                        <TablixMember>
+                          <TablixHeader>
+                            <Size>10cm</Size>
+                            <CellContents>
+                              <Textbox Name="PartnerName">
+                                <CanGrow>true</CanGrow>
+                                <KeepTogether>true</KeepTogether>
+                                <Paragraphs>
+                                  <Paragraph>
+                                    <TextRuns>
+                                      <TextRun>
+                                        <Value>=Fields!PartnerName.Value</Value>
+                                        <Style>
+                                          <FontSize>7pt</FontSize>
+                                        </Style>
+                                      </TextRun>
+                                    </TextRuns>
+                                    <Style>
+                                      <TextAlign>Right</TextAlign>
+                                    </Style>
+                                  </Paragraph>
+                                </Paragraphs>
+                                <rd:DefaultName>PartnerName</rd:DefaultName>
+                                <Style>
+                                  <Border>
+                                    <Color>LightGrey</Color>
+                                    <Style>Solid</Style>
+                                  </Border>
+                                  <VerticalAlign>Middle</VerticalAlign>
+                                  <PaddingLeft>10pt</PaddingLeft>
+                                  <PaddingRight>5pt</PaddingRight>
+                                </Style>
+                              </Textbox>
+                            </CellContents>
+                          </TablixHeader>
+                        </TablixMember>
+                      </TablixMembers>
+                    </TablixMember>
+                  </TablixMembers>
+                </TablixMember>
+              </TablixMembers>
+            </TablixRowHierarchy>
+            <RepeatColumnHeaders>true</RepeatColumnHeaders>
+            <FixedColumnHeaders>true</FixedColumnHeaders>
+            <DataSetName>DataSet_Result</DataSetName>
+            <Height>4.7cm</Height>
+            <Width>13.5cm</Width>
+            <Style>
+              <Border>
+                <Color>LightGrey</Color>
+                <Style>None</Style>
+              </Border>
+              <VerticalAlign>Middle</VerticalAlign>
+            </Style>
+          </Tablix>
+        </ReportItems>
+        <Height>4.7cm</Height>
+        <Style />
+      </Body>
+      <Width>16cm</Width>
+      <Page>
+        <PageHeader>
+          <Height>2.5cm</Height>
+          <PrintOnFirstPage>true</PrintOnFirstPage>
+          <PrintOnLastPage>true</PrintOnLastPage>
+          <ReportItems>
+            <Textbox Name="STRSUBSTNO_Text004_PreviousStartDate_1">
+              <KeepTogether>true</KeepTogether>
+              <Paragraphs>
+                <Paragraph>
+                  <TextRuns>
+                    <TextRun>
+                      <Label>Period</Label>
+                      <Value>=First(Fields!PeriodCaption.Value, "DataSet_Result")</Value>
+                      <Style>
+                        <FontSize>8pt</FontSize>
+                      </Style>
+                    </TextRun>
+                    <TextRun>
+                      <Value xml:space="preserve"> </Value>
+                      <Style>
+                        <FontSize>8pt</FontSize>
+                      </Style>
+                    </TextRun>
+                    <TextRun>
+                      <Label>Report Filter</Label>
+                      <Value>=IIf(First(Fields!ReportFilters.Value, "DataSet_Result") &gt;""," -  " &amp; First(Fields!ReportFilters.Value, "DataSet_Result"),"")</Value>
+                      <Style>
+                        <FontSize>8pt</FontSize>
+                      </Style>
+                    </TextRun>
+                  </TextRuns>
+                  <Style />
+                </Paragraph>
+              </Paragraphs>
+              <Top>1.8cm</Top>
+              <Height>0.5cm</Height>
+              <Width>13.5cm</Width>
+              <Style>
+                <VerticalAlign>Middle</VerticalAlign>
+                <PaddingRight>2pt</PaddingRight>
+              </Style>
+            </Textbox>
+            <Textbox Name="UserID">
+              <CanGrow>true</CanGrow>
+              <KeepTogether>true</KeepTogether>
+              <Paragraphs>
+                <Paragraph>
+                  <TextRuns>
+                    <TextRun>
+                      <Value>=User!UserID</Value>
+                      <Style>
+                        <FontSize>7pt</FontSize>
+                      </Style>
+                    </TextRun>
+                  </TextRuns>
+                  <Style />
+                </Paragraph>
+              </Paragraphs>
+              <Top>0.5cm</Top>
+              <Height>0.5cm</Height>
+              <Width>5cm</Width>
+              <ZIndex>1</ZIndex>
+              <Style>
+                <Border>
+                  <Style>None</Style>
+                </Border>
+                <PaddingLeft>2pt</PaddingLeft>
+                <PaddingRight>2pt</PaddingRight>
+                <PaddingTop>2pt</PaddingTop>
+                <PaddingBottom>2pt</PaddingBottom>
+              </Style>
+            </Textbox>
+            <Textbox Name="ExecutionTime">
+              <CanGrow>true</CanGrow>
+              <KeepTogether>true</KeepTogether>
+              <Paragraphs>
+                <Paragraph>
+                  <TextRuns>
+                    <TextRun>
+                      <Value>=Globals!ExecutionTime</Value>
+                      <Style>
+                        <FontSize>7pt</FontSize>
+                        <Format>f</Format>
+                      </Style>
+                    </TextRun>
+                  </TextRuns>
+                  <Style>
+                    <TextAlign>Left</TextAlign>
+                  </Style>
+                </Paragraph>
+              </Paragraphs>
+              <Top>1cm</Top>
+              <Height>0.5cm</Height>
+              <Width>5cm</Width>
+              <ZIndex>2</ZIndex>
+              <Style>
+                <Border>
+                  <Style>None</Style>
+                </Border>
+                <PaddingLeft>2pt</PaddingLeft>
+                <PaddingRight>2pt</PaddingRight>
+                <PaddingTop>2pt</PaddingTop>
+                <PaddingBottom>2pt</PaddingBottom>
+              </Style>
+            </Textbox>
+            <Textbox Name="CompanyName">
+              <CanGrow>true</CanGrow>
+              <KeepTogether>true</KeepTogether>
+              <Paragraphs>
+                <Paragraph>
+                  <TextRuns>
+                    <TextRun>
+                      <Label>Company</Label>
+                      <Value>=First(Fields!CompanyName.Value, "DataSet_Result")</Value>
+                      <Style>
+                        <FontSize>7pt</FontSize>
+                      </Style>
+                    </TextRun>
+                  </TextRuns>
+                  <Style />
+                </Paragraph>
+              </Paragraphs>
+              <Height>0.5cm</Height>
+              <Width>5cm</Width>
+              <ZIndex>3</ZIndex>
+              <Style>
+                <Border>
+                  <Style>None</Style>
+                </Border>
+                <PaddingLeft>2pt</PaddingLeft>
+                <PaddingRight>2pt</PaddingRight>
+                <PaddingTop>2pt</PaddingTop>
+                <PaddingBottom>2pt</PaddingBottom>
+              </Style>
+            </Textbox>
+            <Textbox Name="Title">
+              <KeepTogether>true</KeepTogether>
+              <Paragraphs>
+                <Paragraph>
+                  <TextRuns>
+                    <TextRun>
+                      <Value>=Parameters!Title.Value</Value>
+                      <Style>
+                        <FontSize>12pt</FontSize>
+                        <FontWeight>Bold</FontWeight>
+                        <TextDecoration>None</TextDecoration>
+                      </Style>
+                    </TextRun>
+                  </TextRuns>
+                  <Style>
+                    <TextAlign>Center</TextAlign>
+                  </Style>
+                </Paragraph>
+              </Paragraphs>
+              <Left>5cm</Left>
+              <Height>1cm</Height>
+              <Width>8.5cm</Width>
+              <ZIndex>4</ZIndex>
+              <Style>
+                <Border>
+                  <Color>=Parameters!Colour1.Value</Color>
+                  <Style>None</Style>
+                  <Width>1.25pt</Width>
+                </Border>
+                <BottomBorder>
+                  <Style>Solid</Style>
+                </BottomBorder>
+                <VerticalAlign>Middle</VerticalAlign>
+                <PaddingLeft>2pt</PaddingLeft>
+                <PaddingRight>2pt</PaddingRight>
+                <PaddingTop>2pt</PaddingTop>
+                <PaddingBottom>2pt</PaddingBottom>
+              </Style>
+            </Textbox>
+            <Textbox Name="CurrencyTextbox">
+              <KeepTogether>true</KeepTogether>
+              <Paragraphs>
+                <Paragraph>
+                  <TextRuns>
+                    <TextRun>
+                      <Value>=Parameters!LCYCaption.Value</Value>
+                      <Style>
+                        <FontSize>8pt</FontSize>
+                        <FontWeight>Bold</FontWeight>
+                      </Style>
+                    </TextRun>
+                    <TextRun>
+                      <Value> : </Value>
+                      <Style>
+                        <FontSize>8pt</FontSize>
+                        <FontWeight>Bold</FontWeight>
+                      </Style>
+                    </TextRun>
+                    <TextRun>
+                      <Label>Curr</Label>
+                      <Value>=First(Fields!LocalCurrency.Value, "DataSet_Result")</Value>
+                      <Style>
+                        <FontSize>8pt</FontSize>
+                        <FontWeight>Bold</FontWeight>
+                      </Style>
+                    </TextRun>
+                  </TextRuns>
+                  <Style>
+                    <TextAlign>Right</TextAlign>
+                  </Style>
+                </Paragraph>
+              </Paragraphs>
+              <Top>1.8cm</Top>
+              <Left>13.5cm</Left>
+              <Height>0.5cm</Height>
+              <Width>2.5cm</Width>
+              <ZIndex>5</ZIndex>
+              <Style>
+                <Border>
+                  <Style>None</Style>
+                </Border>
+                <PaddingRight>2pt</PaddingRight>
+              </Style>
+            </Textbox>
+          </ReportItems>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+          </Style>
+        </PageHeader>
+        <PageFooter>
+          <Height>0.8cm</Height>
+          <PrintOnFirstPage>true</PrintOnFirstPage>
+          <PrintOnLastPage>true</PrintOnLastPage>
+          <ReportItems>
+            <Textbox Name="PageTextbox">
+              <CanGrow>true</CanGrow>
+              <KeepTogether>true</KeepTogether>
+              <Paragraphs>
+                <Paragraph>
+                  <TextRuns>
+                    <TextRun>
+                      <Label>Page</Label>
+                      <Value>=Parameters!PageLbl.Value</Value>
+                      <Style>
+                        <FontSize>8pt</FontSize>
+                      </Style>
+                    </TextRun>
+                    <TextRun>
+                      <Value xml:space="preserve"> </Value>
+                      <Style>
+                        <FontSize>8pt</FontSize>
+                      </Style>
+                    </TextRun>
+                    <TextRun>
+                      <Value>=Globals!PageNumber</Value>
+                      <Style>
+                        <FontSize>8pt</FontSize>
+                      </Style>
+                    </TextRun>
+                    <TextRun>
+                      <Value> / </Value>
+                      <Style>
+                        <FontSize>8pt</FontSize>
+                      </Style>
+                    </TextRun>
+                    <TextRun>
+                      <Value>=Globals!TotalPages</Value>
+                      <Style>
+                        <FontSize>8pt</FontSize>
+                      </Style>
+                    </TextRun>
+                  </TextRuns>
+                  <Style>
+                    <TextAlign>Center</TextAlign>
+                  </Style>
+                </Paragraph>
+              </Paragraphs>
+              <Top>0.3cm</Top>
+              <Left>5cm</Left>
+              <Height>0.4cm</Height>
+              <Width>8.5cm</Width>
+              <Style>
+                <Border>
+                  <Style>None</Style>
+                </Border>
+              </Style>
+            </Textbox>
+          </ReportItems>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+          </Style>
+        </PageFooter>
+        <PageHeight>29.7cm</PageHeight>
+        <PageWidth>21cm</PageWidth>
+        <InteractiveHeight>28.7cm</InteractiveHeight>
+        <InteractiveWidth>21cm</InteractiveWidth>
+        <LeftMargin>0.6cm</LeftMargin>
+        <RightMargin>0.5cm</RightMargin>
+        <TopMargin>0.5cm</TopMargin>
+        <BottomMargin>0.5cm</BottomMargin>
+        <ColumnSpacing>1.27cm</ColumnSpacing>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <ReportParameters>
+    <ReportParameter Name="PartnerCaption">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>PartnerCaption</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>PartnerCaption</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="ResponsibleCaption">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>ResponsibleCaption</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>ResponsibleCaption</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="DpmtLbl">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>DpmtLbl</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>DpmtLbl</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="MatterLbl">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>MatterLbl</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>MatterLbl</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="CustomerLbl">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>CustomerLbl</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>CustomerLbl</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="DocNoCaption">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>DocNoCaption</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>DocNoCaption</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="DocDateCaption">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>DocDateCaption</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>DocDateCaption</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="TotalCaption">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>TotalCaption</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>TotalCaption</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="SubTotalCation">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>SubTotalCation</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>SubTotalCation</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="BilledCaption">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>BilledCaption</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>BilledCaption</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="PreInvoiceCatpion">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>PreInvoiceCatpion</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>PreInvoiceCatpion</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="FeesAmountCaption">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>FeesAmountCaption</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>FeesAmountCaption</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="DisbursementCaption">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>DisbursementCaption</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>DisbursementCaption</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="ExpenseAmountCaption">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>ExpenseAmountCaption</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>ExpenseAmountCaption</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="OutsourcingAmountCaption">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>OutsourcingAmountCaption</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>OutsourcingAmountCaption</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="LCYCaption">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>LCYCaption</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>LCYCaption</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="PageLbl">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>PageLbl</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>PageLbl</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="Title">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>Title</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>Title</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="Colour1">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>Colour1</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>Colour1</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="Colour2">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>Colour2</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>Colour2</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="Colour3">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>Colour3</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>Colour3</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="FontColour1">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>FontColour1</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>FontColour1</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="FontColour2">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>FontColour2</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>FontColour2</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="FontColour3">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>FontColour3</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>FontColour3</Prompt>
+    </ReportParameter>
+  </ReportParameters>
+  <ReportParametersLayout>
+    <GridLayoutDefinition>
+      <NumberOfColumns>1</NumberOfColumns>
+      <NumberOfRows>24</NumberOfRows>
+      <CellDefinitions>
+        <CellDefinition>
+          <ColumnIndex>0</ColumnIndex>
+          <RowIndex>0</RowIndex>
+          <ParameterName>PartnerCaption</ParameterName>
+        </CellDefinition>
+        <CellDefinition>
+          <ColumnIndex>0</ColumnIndex>
+          <RowIndex>1</RowIndex>
+          <ParameterName>ResponsibleCaption</ParameterName>
+        </CellDefinition>
+        <CellDefinition>
+          <ColumnIndex>0</ColumnIndex>
+          <RowIndex>2</RowIndex>
+          <ParameterName>DpmtLbl</ParameterName>
+        </CellDefinition>
+        <CellDefinition>
+          <ColumnIndex>0</ColumnIndex>
+          <RowIndex>3</RowIndex>
+          <ParameterName>MatterLbl</ParameterName>
+        </CellDefinition>
+        <CellDefinition>
+          <ColumnIndex>0</ColumnIndex>
+          <RowIndex>4</RowIndex>
+          <ParameterName>CustomerLbl</ParameterName>
+        </CellDefinition>
+        <CellDefinition>
+          <ColumnIndex>0</ColumnIndex>
+          <RowIndex>5</RowIndex>
+          <ParameterName>DocNoCaption</ParameterName>
+        </CellDefinition>
+        <CellDefinition>
+          <ColumnIndex>0</ColumnIndex>
+          <RowIndex>6</RowIndex>
+          <ParameterName>DocDateCaption</ParameterName>
+        </CellDefinition>
+        <CellDefinition>
+          <ColumnIndex>0</ColumnIndex>
+          <RowIndex>7</RowIndex>
+          <ParameterName>TotalCaption</ParameterName>
+        </CellDefinition>
+        <CellDefinition>
+          <ColumnIndex>0</ColumnIndex>
+          <RowIndex>8</RowIndex>
+          <ParameterName>SubTotalCation</ParameterName>
+        </CellDefinition>
+        <CellDefinition>
+          <ColumnIndex>0</ColumnIndex>
+          <RowIndex>9</RowIndex>
+          <ParameterName>BilledCaption</ParameterName>
+        </CellDefinition>
+        <CellDefinition>
+          <ColumnIndex>0</ColumnIndex>
+          <RowIndex>10</RowIndex>
+          <ParameterName>PreInvoiceCatpion</ParameterName>
+        </CellDefinition>
+        <CellDefinition>
+          <ColumnIndex>0</ColumnIndex>
+          <RowIndex>11</RowIndex>
+          <ParameterName>FeesAmountCaption</ParameterName>
+        </CellDefinition>
+        <CellDefinition>
+          <ColumnIndex>0</ColumnIndex>
+          <RowIndex>12</RowIndex>
+          <ParameterName>DisbursementCaption</ParameterName>
+        </CellDefinition>
+        <CellDefinition>
+          <ColumnIndex>0</ColumnIndex>
+          <RowIndex>13</RowIndex>
+          <ParameterName>ExpenseAmountCaption</ParameterName>
+        </CellDefinition>
+        <CellDefinition>
+          <ColumnIndex>0</ColumnIndex>
+          <RowIndex>14</RowIndex>
+          <ParameterName>OutsourcingAmountCaption</ParameterName>
+        </CellDefinition>
+        <CellDefinition>
+          <ColumnIndex>0</ColumnIndex>
+          <RowIndex>15</RowIndex>
+          <ParameterName>LCYCaption</ParameterName>
+        </CellDefinition>
+        <CellDefinition>
+          <ColumnIndex>0</ColumnIndex>
+          <RowIndex>16</RowIndex>
+          <ParameterName>PageLbl</ParameterName>
+        </CellDefinition>
+        <CellDefinition>
+          <ColumnIndex>0</ColumnIndex>
+          <RowIndex>17</RowIndex>
+          <ParameterName>Title</ParameterName>
+        </CellDefinition>
+        <CellDefinition>
+          <ColumnIndex>0</ColumnIndex>
+          <RowIndex>18</RowIndex>
+          <ParameterName>Colour1</ParameterName>
+        </CellDefinition>
+        <CellDefinition>
+          <ColumnIndex>0</ColumnIndex>
+          <RowIndex>19</RowIndex>
+          <ParameterName>Colour2</ParameterName>
+        </CellDefinition>
+        <CellDefinition>
+          <ColumnIndex>0</ColumnIndex>
+          <RowIndex>20</RowIndex>
+          <ParameterName>Colour3</ParameterName>
+        </CellDefinition>
+        <CellDefinition>
+          <ColumnIndex>0</ColumnIndex>
+          <RowIndex>21</RowIndex>
+          <ParameterName>FontColour1</ParameterName>
+        </CellDefinition>
+        <CellDefinition>
+          <ColumnIndex>0</ColumnIndex>
+          <RowIndex>22</RowIndex>
+          <ParameterName>FontColour2</ParameterName>
+        </CellDefinition>
+        <CellDefinition>
+          <ColumnIndex>0</ColumnIndex>
+          <RowIndex>23</RowIndex>
+          <ParameterName>FontColour3</ParameterName>
+        </CellDefinition>
+      </CellDefinitions>
+    </GridLayoutDefinition>
+  </ReportParametersLayout>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Shared Data1 as Object
+Shared Data2 as Object
+Shared Data3 as Object
+Shared Data4 as Object
+
+Public Function GetData(Num as Integer, Group as integer) as Object
+if Group = 1 then
+   Return Cstr(Choose(Num, Split(Cstr(Data1),Chr(177))))
+End If
+
+if Group = 2 then
+   Return Cstr(Choose(Num, Split(Cstr(Data2),Chr(177))))
+End If
+
+if Group = 3 then
+   Return Cstr(Choose(Num, Split(Cstr(Data3),Chr(177))))
+End If
+
+if Group = 4 then
+   Return Cstr(Choose(Num, Split(Cstr(Data4),Chr(177))))
+End If
+End Function
+
+Public Function SetData(NewData as Object,Group as integer)
+  If Group = 1 and NewData &gt; "" Then
+      Data1 = NewData
+  End If
+
+  If Group = 2 and NewData &gt; "" Then
+      Data2 = NewData
+  End If
+
+  If Group = 3 and NewData &gt; "" Then
+      Data3 = NewData
+  End If
+
+  If Group = 4 and NewData &gt; "" Then
+      Data4 = NewData
+  End If
+
+  Return True
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Cm</rd:ReportUnitType>
+  <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="CompanyName">
+          <DataField>CompanyName</DataField>
+        </Field>
+        <Field Name="PeriodCaption">
+          <DataField>PeriodCaption</DataField>
+        </Field>
+        <Field Name="EndBillingPeriod">
+          <DataField>EndBillingPeriod</DataField>
+        </Field>
+        <Field Name="StartCumulPeriod">
+          <DataField>StartCumulPeriod</DataField>
+        </Field>
+        <Field Name="ReportFilters">
+          <DataField>ReportFilters</DataField>
+        </Field>
+        <Field Name="LocalCurrency">
+          <DataField>LocalCurrency</DataField>
+        </Field>
+        <Field Name="Matter_No_">
+          <DataField>Matter_No_</DataField>
+        </Field>
+        <Field Name="MatterName">
+          <DataField>MatterName</DataField>
+        </Field>
+        <Field Name="PartnerNo_">
+          <DataField>PartnerNo_</DataField>
+        </Field>
+        <Field Name="PartnerName">
+          <DataField>PartnerName</DataField>
+        </Field>
+        <Field Name="ResponsibleNo">
+          <DataField>ResponsibleNo</DataField>
+        </Field>
+        <Field Name="ResponsibleName">
+          <DataField>ResponsibleName</DataField>
+        </Field>
+        <Field Name="Sell_to_Customer_No_">
+          <DataField>Sell_to_Customer_No_</DataField>
+        </Field>
+        <Field Name="Sell_to_Customer_Name">
+          <DataField>Sell_to_Customer_Name</DataField>
+        </Field>
+        <Field Name="BillCustomerNo">
+          <DataField>BillCustomerNo</DataField>
+        </Field>
+        <Field Name="BillCustomerName">
+          <DataField>BillCustomerName</DataField>
+        </Field>
+        <Field Name="BoniMaliCumulAmt">
+          <DataField>BoniMaliCumulAmt</DataField>
+        </Field>
+        <Field Name="BoniMaliCumulAmtFormat">
+          <DataField>BoniMaliCumulAmtFormat</DataField>
+        </Field>
+        <Field Name="ProvisionAmt">
+          <DataField>ProvisionAmt</DataField>
+        </Field>
+        <Field Name="ProvisionAmtFormat">
+          <DataField>ProvisionAmtFormat</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>

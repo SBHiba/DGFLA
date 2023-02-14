@@ -1,0 +1,30 @@
+{
+  "id": "de035cd1-0d93-4e5f-9aa9-f02ddf3dda72",
+  "name": "DGFLA_Application",
+  "publisher": "SB Consulting",
+  "brief": "Développement réservé au cabinet De Gaulle Fleurance & Associés",
+  "description": "",
+  "version": "1.0.0.0",
+  "supportedLocales": ["fr-FR"],
+  "idRanges": [{"from": 50000,"to": 99999}],
+  "privacyStatement": "",
+  "EULA": "",
+  "help": "",
+  "url": "http://s-bconsulting.fr",
+  "dependencies": [
+    {
+      "id": "4054557b-b1f0-4f22-9062-800f6af08fe7",
+      "publisher": "SB Consulting",
+      "name": "SB Lawyer",
+      "version": "7.21.3.1"
+    }
+  ],
+  "preprocessorSymbols": ["CLEAN19"],
+  "screenshots": [],
+  "platform": "21.0.0.0",
+  "application": "21.0.0.0",
+  "features": ["TranslationFile", "NoImplicitWith"],
+  "resourceExposurePolicy": {"allowDebugging": true,"allowDownloadingSource": false,"includeSourceInSymbolFile": false},
+  "runtime": "10.0",
+  "propagateDependencies": true
+}

@@ -1,0 +1,29 @@
+// Function in RDLC Report (Code in Report Property)
+
+=> Convert a decimal to a HH:mm (string)
+Public Function C2H(ByVal Value As Decimal)
+If Value < 0 then
+        If  (1 - (Abs(Value) Mod 1)) <= 0.00833 then 
+            Return Format(Ceiling(Value)-1,"#,0") & ":00"
+        Else
+            Return Format(Ceiling(Value),"#,0") & ":" & Format(Abs(Value * 60) Mod 60, "00")
+        End If
+Else
+	If  (1 - (Abs(Value) Mod 1)) <= 0.00833 then 
+		Return Format(Int(Value)+1,"#,0") & ":00"
+	Else 
+        Return Format(Int(Value),"#,0") & ":" & Format((Value * 60) Mod 60, "00")
+	End If
+End If
+End Function
+
+
+=> Divide without error
+Public Function Divider(ByVal Dividend As Decimal, ByVal Divisor As Decimal)
+If IsNothing(Divisor) Or Divisor = 0
+    Return 0
+Else
+    Return Dividend/Divisor 
+End If 
+End Function
+ 

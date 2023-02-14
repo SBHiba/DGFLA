@@ -1,0 +1,53 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "SB Lawyer_test (sandbox Saas)",
+            "type": "al",
+            "request": "launch",
+            "schemaUpdateMode": "ForceSync",
+            "breakOnError": true,
+            "breakOnRecordWrite": false,
+            "launchBrowser": true,
+            "environmentType": "Sandbox",
+            "environmentName": "SBLawyer_Test",
+            "tenant": "d1176b80-8023-4b7a-adc8-99a22336517f"
+        }
+        
+        ,{
+            "name": "SBLawerCopie (Saas)",
+            "type": "al",
+            "request": "launch",
+            // "startupObjectType": "Page",
+            // "startupObjectId": 22,
+            "schemaUpdateMode": "ForceSync",
+            "breakOnError": true,
+            "breakOnRecordWrite": false,
+            "launchBrowser": true,
+            "environmentType": "Sandbox",
+            "environmentName": "SBLawerCopie",
+            "tenant": "d1176b80-8023-4b7a-adc8-99a22336517f"
+        },
+        {
+            "name": "Hiba Local",
+            "type": "al",
+            "request": "launch",
+            "environmentType": "OnPrem",
+            "server": "http://localhost:8080/BC210/",
+            "serverInstance": "BC210",
+            "port": 8049,
+            "authentication": "Windows",
+            // "startupObjectId": 22,
+            "breakOnError": true,
+            "breakOnRecordWrite": false,
+            "launchBrowser": true,
+            "enableSqlInformationDebugger": true,
+            "enableLongRunningSqlStatements": true,
+            "longRunningSqlStatementsThreshold": 500,
+            "numberOfSqlStatements": 10,
+            "tenant": "default",
+            "schemaUpdateMode": "ForceSync"
+
+        }
+    ]
+}
