@@ -4,7 +4,7 @@ pageextension 50004 "DGF Customer List" extends "Customer List"
     {
         addafter("Name 2")
         {
-            field(Status; Rec.Status)
+            field(DGFStatus; Rec."DGF Status")
             {
                 ApplicationArea = SBXSBLawyer;
             }
@@ -24,7 +24,7 @@ pageextension 50004 "DGF Customer List" extends "Customer List"
     {
         addfirst(processing)
         {
-            action(SBXInitMyCust)
+            action(DGFInitMyCust)
             {
                 ApplicationArea = SBXSBLawyer;
 

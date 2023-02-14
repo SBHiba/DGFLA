@@ -8,13 +8,13 @@ pagecustomization "DGF Customer Ledger Entries" customizes "Customer Ledger Entr
         {
             Visible = true;
         }
-        modify("DGFLA Sell-to Name")
+        modify("DGF Sell-to Name")
         {
             Visible = true;
         }
         moveafter("Customer Name"; "SBX Sell-to Customer No.")
 
-        moveafter("SBX Sell-to Customer No."; "DGFLA Sell-to Name")
+        //moveafter("SBX Sell-to Customer No."; "DGFLA Sell-to Name")
 
         modify("Customer No.")
         {

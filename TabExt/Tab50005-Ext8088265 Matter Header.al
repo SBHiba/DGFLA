@@ -73,26 +73,26 @@ tableextension 50005 "DGF Matter Header" extends "SBX Matter Header"
         {
             Caption = 'Ship-to Contact', Comment = 'FRA = Contact Destinataire';
         }
-        field(50007; "Creation Status"; Enum "DGF Creation Status")
+        field(50007; "DGF Creation Status"; Enum "DGF Creation Status")
         {
             Caption = 'Creation Status';
         }
-        field(50008; "Lawyers / Notaries Confid Agre"; Boolean)
+        field(50008; "DGF Lawyers / Notaries Confid Agre"; Boolean)
         {
             Caption = 'Lawyers / Notaries Confidentiality Agreement';
         }
-        field(50009; "Inv. Time Range (min)"; Integer)
+        field(50009; "DGF Inv. Time Range (min)"; Integer)
         {
             Caption = 'Invoicing Time Range (min)';
             Description = 'SBL2.00.0000';
 
             trigger OnValidate()
             begin
-                if "Inv. Time Range (min)" = 0 then
-                    "Inv. Rounding Range (min)" := "Inv. Rounding Range (min)"::None;
+                if "DGF Inv. Time Range (min)" = 0 then
+                    "DGF Inv. Rounding Range (min)" := "DGF Inv. Rounding Range (min)"::None;
             end;
         }
-        field(50010; "Inv. Rounding Range (min)"; Enum "SBX Rounding Mode")
+        field(50010; "DGF Inv. Rounding Range (min)"; Enum "SBX Rounding Mode")
         {
             Caption = 'Invoicing Rounding Range (min)';
             Description = 'SBL2.00.0000';

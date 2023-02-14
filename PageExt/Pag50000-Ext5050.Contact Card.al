@@ -9,7 +9,7 @@ pageextension 50000 "DGF Contact Card" extends "Contact Card"
 
         addafter("E-Mail")
         {
-            field("E-Mail 2"; Rec."E-Mail 2")
+            field("DGF E-Mail 2"; Rec."E-Mail 2")
             {
                 ApplicationArea = All;
             }
@@ -17,7 +17,7 @@ pageextension 50000 "DGF Contact Card" extends "Contact Card"
 
         addafter("Phone No.")
         {
-            field(Pager; Rec.Pager)
+            field(DGFPager; Rec.Pager)
             {
                 ApplicationArea = All;
                 Caption = 'Téléphone 2';

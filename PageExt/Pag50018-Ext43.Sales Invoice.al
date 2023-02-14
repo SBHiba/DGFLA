@@ -44,7 +44,7 @@ pageextension 50018 "DGF Sales Invoice" extends "Sales Invoice"
                 end;
             }*/
 
-            action(ApplyTimeRange)
+            action(DGFApplyTimeRange)
             {
                 ApplicationArea = All;
                 Caption = 'Apply Time Range';

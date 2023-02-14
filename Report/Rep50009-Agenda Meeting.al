@@ -42,9 +42,9 @@ report 50009 "DGF Agenda Meeting"
             { }
             column(Unit_Price; "Unit Price")
             { }
-            column(Seniority_ResourceDGFLA; "DGFLA Seniority")
+            column(Seniority_ResourceDGFLA; "DGF Seniority")
             { }
-            column(Division_DGFLAResource; "DGFLA Division")
+            column(Division_DGFLAResource; "DGF Division")
             { }
 
 
@@ -408,7 +408,7 @@ report 50009 "DGF Agenda Meeting"
             begin
                 txtFilter_g := Resource.GetFilters;
 
-                Resource.SetFilter("DGFLA Division", '<>%1', ''); // Hack POC
+                Resource.SetFilter("DGF Division", '<>%1', ''); // Hack POC
 
                 Clear(MinDateYear);
                 RecDate.SetRange("Period Type", RecDate."Period Type"::Week);
@@ -448,7 +448,7 @@ report 50009 "DGF Agenda Meeting"
                     NameDpmtAnalytics := DimensionValue_L.Name;
                 end;
 
-                if "DGFLA Division" = '.' then "DGFLA Division" := '';
+                if "DGF Division" = '.' then "DGF Division" := '';
 
                 Resource_L.SetRange("No.", "No.");
                 ReportForecastViewHyperlink := GetUrl(CurrentClientType, CompanyName, ObjectType::"Report", report::"DGF Details Forecast View");

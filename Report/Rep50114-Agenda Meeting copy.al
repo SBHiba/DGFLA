@@ -51,9 +51,9 @@ report 50114 "DGF Agenda Meeting 2"
                 { }
                 column(Unit_Price; "Unit Price")
                 { }
-                column(Seniority_ResourceDGFLA; "DGFLA Seniority")
+                column(Seniority_ResourceDGFLA; "DGF Seniority")
                 { }
-                column(Division_DGFLAResource; "DGFLA Division")
+                column(Division_DGFLAResource; "DGF Division")
                 { }
 
 
@@ -422,7 +422,7 @@ report 50114 "DGF Agenda Meeting 2"
 
                     Resource.ChangeCompany(Company.Name);
 
-                    Resource.SetFilter("DGFLA Division", '<>%1', ''); // Hack POC
+                    Resource.SetFilter("DGF Division", '<>%1', ''); // Hack POC
 
                     Clear(MinDateYear);
                     RecDate.SetRange("Period Type", RecDate."Period Type"::Week);
@@ -463,7 +463,7 @@ report 50114 "DGF Agenda Meeting 2"
                         NameDpmtAnalytics := DimensionValue_L.Name;
                     end;
 
-                    if "DGFLA Division" = '.' then "DGFLA Division" := '';
+                    if "DGF Division" = '.' then "DGF Division" := '';
 
                     Resource_L.ChangeCompany(Company.Name);
                     Resource_L.SetRange("No.", "No.");

@@ -4,7 +4,7 @@ pageextension 50011 "DGF Matter Card" extends "SBX Matter Card"
     {
         addafter("Invoice Period")
         {
-            field("Billing Time Range (min)"; Rec."DGF Billing Time Range (min)")
+            field("DGF Billing Time Range (min)"; Rec."DGF Billing Time Range (min)")
             {
                 ApplicationArea = SBXSBLawyer;
                 Importance = Promoted;
@@ -15,11 +15,11 @@ pageextension 50011 "DGF Matter Card" extends "SBX Matter Card"
                     CurrPage.Update;
                 end;
             }
-            group(RangeGrpinvoicing)
+            group(DGFRangeGrpinvoicing)
             {
                 ShowCaption = false;
                 Visible = bTimeRangeinvoicingNotNull or (Rec."DGF Billing Time Range (min)" <> 0);
-                field("Billing Rounding Range"; Rec."DGF Billing Rounding Range")
+                field("DGF Billing Rounding Range"; Rec."DGF Billing Rounding Range")
                 {
                     ApplicationArea = SBXSBLawyer;
                     Editable = bTimeRangeinvoicingNotNull or (Rec."DGF Billing Time Range (min)" <> 0);
@@ -56,25 +56,25 @@ pageextension 50011 "DGF Matter Card" extends "SBX Matter Card"
         }
         addafter("Time Range (min)")
         {
-            field("Inv. Time Range (min)"; Rec."Inv. Time Range (min)")
+            field("DGF Inv. Time Range (min)"; Rec."DGF Inv. Time Range (min)")
             {
                 ApplicationArea = SBXSBLawyer;
                 Importance = Promoted;
 
                 trigger OnValidate()
                 begin
-                    InvbTimeRangeNotNull := Rec."Inv. Time Range (min)" <> 0;
+                    InvbTimeRangeNotNull := Rec."DGF Inv. Time Range (min)" <> 0;
                     CurrPage.Update();
                 end;
             }
         }
         addafter(RangeGrp)
         {
-            group(InvRangeGrp)
+            group(DGFInvRangeGrp)
             {
                 ShowCaption = false;
                 Visible = InvbTimeRangeNotNull;
-                field("Inv. Rounding Range (min)"; Rec."Inv. Rounding Range (min)")
+                field("DGF Inv. Rounding Range (min)"; Rec."DGF Inv. Rounding Range (min)")
                 {
                     ApplicationArea = SBXSBLawyer;
                     Editable = InvbTimeRangeNotNull;
@@ -85,11 +85,11 @@ pageextension 50011 "DGF Matter Card" extends "SBX Matter Card"
         }
         addlast(GeneralGrp)
         {
-            field("Creation Status"; Rec."Creation Status")
+            field("DGF Creation Status"; Rec."DGF Creation Status")
             {
                 ApplicationArea = All;
             }
-            field("Lawyers / Notaries Confid Agre"; Rec."Lawyers / Notaries Confid Agre")
+            field("DGF Lawyers / Notaries Confid Agre"; Rec."DGF Lawyers / Notaries Confid Agre")
             {
                 ApplicationArea = All;
             }
@@ -100,7 +100,7 @@ pageextension 50011 "DGF Matter Card" extends "SBX Matter Card"
     {
         addfirst(InfoActionGrp)
         {
-            action(RunBillToAddresses)
+            action(DGFRunBillToAddresses)
             {
                 ApplicationArea = SBXSBLawyer;
                 Caption = 'Bill-to Addresses', Comment = 'Adresses de facturation';
@@ -124,7 +124,7 @@ pageextension 50011 "DGF Matter Card" extends "SBX Matter Card"
     trigger OnAfterGetRecord()
     begin
         bTimeRangeinvoicingNotNull := Rec."DGF Billing Time Range (min)" <> 0;
-        InvbTimeRangeNotNull := rec."Inv. Time Range (min)" <> 0;
+        InvbTimeRangeNotNull := Rec."DGF Inv. Time Range (min)" <> 0;
 
     end;
 }

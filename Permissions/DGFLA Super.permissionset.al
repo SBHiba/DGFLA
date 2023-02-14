@@ -6,12 +6,12 @@ permissionset 50000 "DGFLA Super"
 
     Permissions =
         tabledata "DGF Setup" = RIMD,
-        tabledata "Related Bill-to Contacts" = RIMD,
+        tabledata "DGF Related Bill-to Contacts" = RIMD,
 
         table "DGF Setup" = X,
-        table "Related Bill-to Contacts" = X,
+        table "DGF Related Bill-to Contacts" = X,
 
-        report "Days Sales Outstanding" = X,
+        report "DGF Days Sales Outstanding" = X,
         report "DGF Agenda Meeting" = X,
         report "DGF Agenda Meeting 2" = X,
         report "DGF Boni-Mali List" = X,

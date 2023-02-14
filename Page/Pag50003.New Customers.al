@@ -83,7 +83,7 @@ page 50003 "DGF New Customers List"
         Rec.FilterGroup := 2;
         Rec.Setfilter(SystemCreatedAt, '%1..', CreateDateTime(calcdate('<-4D>', WorkDate()), 0T));
         Rec.SetFilter(Name, '<>%1', '');
-        Rec.SetRange(Confidential, false);
+        Rec.SetRange("DGF Confidential", false);
         Rec.FilterGroup := 1;
     end;
 

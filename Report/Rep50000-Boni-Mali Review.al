@@ -120,12 +120,12 @@ report 50000 "DGF Boni-Mali Review"
                 WIPMatterAmt := 0;
                 WIPEndDate := 0D;
                 SaleslineArchive_L.Reset();
-                SaleslineArchive_L.SetCurrentKey("SBX Matter No.");
-                SaleslineArchive_L.SetRange("SBX Matter No.", "Matter No.");
+                SaleslineArchive_L.SetCurrentKey("DGF Matter No.");
+                SaleslineArchive_L.SetRange("DGF Matter No.", "Matter No.");
                 SaleslineArchive_L.SetRange("Document Type", SaleslineArchive_L."Document Type"::Invoice);
                 SaleslineArchive_L.SetRange("Doc. No. Occurrence", 1);
                 SaleslineArchive_L.SetRange("Shipment Date", StartingDate, EndingDate);
-                SaleslineArchive_L.SetFilter("SBX Matter Ledger Entry No.", '<>0'); // => SA : ne prendre que les lignes avec un N° MLE, car non saisi lors de la facturation  
+                SaleslineArchive_L.SetFilter("DGF Matter Ledger Entry No.", '<>0'); // => SA : ne prendre que les lignes avec un N° MLE, car non saisi lors de la facturation  
                 // SaleslineArchive_L.SetRange(SystemCreatedAt, CreateDateTime(StartindDate, ''), CreateDateTime(EndingDate,''));
                 SaleslineArchive_L.SetFilter(Type, '<>%1', SaleslineArchive_L.Type::" ");
 
@@ -149,15 +149,15 @@ report 50000 "DGF Boni-Mali Review"
                             if SalesHeaderArchive_L."Currency Factor" <> 0 then
                                 CurrencyFactor := SalesHeaderArchive_L."Currency Factor";
 
-                            case SaleslineArchive_L."SBX Matter Entry Type" of
+                            case SaleslineArchive_L."DGF Matter Entry Type" of
                                 // SaleslineArchive_L."SBX Matter Entry Type"::Adjustment,
-                                SaleslineArchive_L."SBX Matter Entry Type"::Service:
-                                    PreInvoiceServiceAmt += SaleslineArchive_L."SBX Reference Amount" / CurrencyFactor;
+                                SaleslineArchive_L."DGF Matter Entry Type"::Service:
+                                    PreInvoiceServiceAmt += SaleslineArchive_L."DGF Reference Amount" / CurrencyFactor;
 
-                                SaleslineArchive_L."SBX Matter Entry Type"::Expense,
-                                SaleslineArchive_L."SBX Matter Entry Type"::"3",
-                                SaleslineArchive_L."SBX Matter Entry Type"::"External Expense":
-                                    PreInvoiceExpenseAmt += SaleslineArchive_L."SBX Reference Amount" / CurrencyFactor;
+                                SaleslineArchive_L."DGF Matter Entry Type"::Expense,
+                                SaleslineArchive_L."DGF Matter Entry Type"::"3",
+                                SaleslineArchive_L."DGF Matter Entry Type"::"External Expense":
+                                    PreInvoiceExpenseAmt += SaleslineArchive_L."DGF Reference Amount" / CurrencyFactor;
 
                             // SaleslineArchive_L."SBX Matter Entry Type"::" ":
                             //     begin
@@ -177,7 +177,7 @@ report 50000 "DGF Boni-Mali Review"
                             // // Calcul Montants Report 
                             // WIPMatterAmt := 0;
                             MatterLedgerEntry_L.Reset();
-                            MatterLedgerEntry_L.SetRange("Entry No.", SaleslineArchive_L."SBX Matter Ledger Entry No.");
+                            MatterLedgerEntry_L.SetRange("Entry No.", SaleslineArchive_L."DGF Matter Ledger Entry No.");
                             MatterLedgerEntry_L.SetRange("Matter No.", "Matter No.");
                             MatterLedgerEntry_L.SetRange("Closed by Ledger Entry No.", 0); // ne pas prendre en compte si transfert !
                             MatterLedgerEntry_L.SetRange("Date Filter", 0D, EndingDate);

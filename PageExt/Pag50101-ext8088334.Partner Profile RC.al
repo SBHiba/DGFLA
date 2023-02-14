@@ -12,13 +12,13 @@ pageextension 50101 "DGF Partner Profile RC" extends "SBX Partner Role Center"
 
         addafter(Control8088263)
         {
-            part(NewCustomer; "DGF New Customers List")
+            part(DGFNewCustomer; "DGF New Customers List")
             {
                 Caption = 'Nouveaux Clients';
                 ApplicationArea = SBXSBLawyer;
             }
 
-            part(NewMatters; "DGF New Matters List")
+            part(DGFNewMatters; "DGF New Matters List")
             {
                 Caption = 'Nouveaux Dossiers';
                 ApplicationArea = SBXSBLawyer;

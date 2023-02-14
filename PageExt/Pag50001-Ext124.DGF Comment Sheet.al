@@ -1,4 +1,4 @@
-pageextension 50001 "DGFLA Comment Sheet" extends "Comment Sheet"
+pageextension 50001 "DGF Comment Sheet" extends "Comment Sheet"
 {
     layout
     {

@@ -2,17 +2,17 @@ tableextension 50002 "DGF Customer" extends Customer
 {
     fields
     {
-        field(50000; Status; Option)
+        field(50000; "DGF Status"; Option)
         {
             OptionMembers = Prospect,Actif,Inactif;
             OptionCaption = 'Lead,Active,Inactive', Comment = 'FRA = Prospect,Actif,Inactif';
             Editable = true;
         }
-        field(50001; Confidential; Boolean)
+        field(50001; "DGF Confidential"; Boolean)
         {
             Caption = 'Confidential', Comment = 'FRA = Confidentiel';
         }
-        field(50002; "Account Manager"; Code[20])
+        field(50002; "DGF Account Manager"; Code[20])
         {
             Caption = 'Resp. Admin. Client et CAC';
             TableRelation = Resource."No.";
@@ -22,9 +22,9 @@ tableextension 50002 "DGF Customer" extends Customer
 
     keys
     {
-        key(DGFKey1; Status)
+        key(DGFKey1; "DGF Status")
         { }
-        key(DGFKey2; "Account Manager")
+        key(DGFKey2; "DGF Account Manager")
         { }
     }
 }

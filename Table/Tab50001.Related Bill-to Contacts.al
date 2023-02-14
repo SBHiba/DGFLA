@@ -1,4 +1,4 @@
-table 50001 "Related Bill-to Contacts"
+table 50001 "DGF Related Bill-to Contacts"
 {
     Caption = 'Adresses de facturation', Comment = 'Related Bill-to Contacts';
     DataClassification = ToBeClassified;

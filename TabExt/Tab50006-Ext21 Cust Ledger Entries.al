@@ -1,8 +1,8 @@
-tableextension 50006 "Cust. Ledger Entries" extends "Cust. Ledger Entry"
+tableextension 50006 "DGF Cust. Ledger Entries" extends "Cust. Ledger Entry"
 {
     fields
     {
-        field(50000; "DGFLA Sell-to Name"; Text[100])
+        field(50000; "DGF Sell-to Name"; Text[100])
         {
             Caption = 'Sell-to Name', comment = 'FRA = Client donneur d''ordre';
             FieldClass = FlowField;

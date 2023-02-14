@@ -3,7 +3,7 @@ page 50010 "DGF Related Bill-to Addr."
     ApplicationArea = SBXSBLawyer;
     Caption = 'Related Bill-to Addresses';
     PageType = List;
-    SourceTable = "Related Bill-to Contacts";
+    SourceTable = "DGF Related Bill-to Contacts";
     UsageCategory = Lists;
 
     layout

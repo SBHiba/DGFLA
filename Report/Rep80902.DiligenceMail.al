@@ -1,4 +1,4 @@
-report 80902 "Diligence Mail"
+report 80902 "DGF Diligence Mail"
 {
     Caption = 'Diligence Mail';
     ProcessingOnly = true;

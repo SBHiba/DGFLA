@@ -26,7 +26,7 @@ page 50001 "DGF Sales Invoice Archive"
                     Visible = DocNoVisible;
                 }
 
-                field("SBX Campaign Lot No."; Rec."SBX Campaign Lot No.")
+                field("SBX Campaign Lot No."; Rec."DGF Campaign Lot No.")
                 {
                     ApplicationArea = SBXSBLAdvanced;
                     Visible = FALSE;
@@ -64,7 +64,7 @@ page 50001 "DGF Sales Invoice Archive"
                 group("Sell-to")
                 {
                     Caption = 'Sell-to';
-                    field("SBX Sell-to Address Code"; Rec."SBX Sell-to Address Code")
+                    field("SBX Sell-to Address Code"; Rec."DGF Sell-to Address Code")
                     {
                         ApplicationArea = SBXSBLawyer;
                         Importance = Additional;
@@ -242,7 +242,7 @@ page 50001 "DGF Sales Invoice Archive"
                 group(SBXOptionMatter)
                 {
                     Caption = 'Options Matter';
-                    field("SBX Matter No."; Rec."SBX Matter No.")
+                    field("SBX Matter No."; Rec."DGF Matter No.")
                     {
                         ApplicationArea = SBXSBLawyer;
                         Importance = Promoted;
@@ -257,49 +257,49 @@ page 50001 "DGF Sales Invoice Archive"
                             recMatterHeader_L: Record "SBX Matter Header";
 
                         begin
-                            Rec.TestField("SBX Matter No.");
+                            Rec.TestField("DGF Matter No.");
                             Clear(recMatterHeader_L);
                             recMatterHeader_L.Reset;
-                            recMatterHeader_L.SetRange("Matter No.", Rec."SBX Matter No.");
+                            recMatterHeader_L.SetRange("Matter No.", Rec."DGF Matter No.");
                             Page.Run(Page::"SBX Matter Card", recMatterHeader_L);
                         end;
                     }
 
-                    field("SBX Matter Name"; Rec."SBX Matter Description")
+                    field("SBX Matter Name"; Rec."DGF Matter Description")
                     {
                         ApplicationArea = SBXSBLawyer;
                         Importance = Promoted;
                         Editable = false;
                     }
 
-                    field("SBX Partner No."; Rec."SBX Partner No.")
+                    field("SBX Partner No."; Rec."DGF Partner No.")
                     {
                         ApplicationArea = SBXSBLawyer;
                     }
-                    field("SBX Responsible No."; Rec."SBX Responsible No.")
+                    field("SBX Responsible No."; Rec."DGF Responsible No.")
                     {
                         ApplicationArea = SBXSBLawyer;
                     }
-                    field("SBX Matter Prepayment"; Rec."SBX Matter Prepayment")
+                    field("SBX Matter Prepayment"; Rec."DGF Matter Prepayment")
                     {
                         ApplicationArea = SBXSBLawyer;
                         ToolTip = 'This field is ticked when it is an prepayment invoice.';
                         Importance = Additional;
                     }
 
-                    field("SBX Starting Period Date"; Rec."SBX Starting Period Date")
+                    field("SBX Starting Period Date"; Rec."DGF Starting Period Date")
                     {
                         ApplicationArea = SBXSBLawyer;
                         Importance = Additional;
                     }
-                    field("SBX Ending Period Date"; Rec."SBX Ending Period Date")
+                    field("SBX Ending Period Date"; Rec."DGF Ending Period Date")
                     {
                         ApplicationArea = SBXSBLawyer;
                         Importance = Additional;
                     }
                 }
 
-                field("SBX Paper Process"; Rec."SBX Paper Process")
+                field("SBX Paper Process"; Rec."DGF Paper Process")
                 {
                     ApplicationArea = SBXSBLAdvanced;
                     Importance = Additional;
@@ -310,13 +310,13 @@ page 50001 "DGF Sales Invoice Archive"
                 {
                     Caption = 'Multi Bill-to';
 
-                    field("SBX Main Document No."; Rec."SBX Main Document No.")
+                    field("SBX Main Document No."; Rec."DGF Main Document No.")
                     {
                         ApplicationArea = SBXSBLawyer;
                         //Editable = true;
 
                     }
-                    field("SBX Main Document"; Rec."SBX Main Document")
+                    field("SBX Main Document"; Rec."DGF Main Document")
                     {
                         ApplicationArea = SBXSBLawyer;
                     }
@@ -444,12 +444,12 @@ page 50001 "DGF Sales Invoice Archive"
                 group(SBXSBLOptionsInvoicing)
                 {
                     Caption = 'Matter Billing Options';
-                    field("SBX To Merge"; Rec."SBX To Merge")
+                    field("SBX To Merge"; Rec."DGF To Merge")
                     {
                         ApplicationArea = SBXSBLawyer;
                         ToolTip = 'Specifies that the customer wants to consolidate all invoices into one invoice.';
                     }
-                    field("SBX Print Invoice Details"; Rec."SBX Print Invoice Details")
+                    field("SBX Print Invoice Details"; Rec."DGF Print Invoice Details")
                     {
                         ApplicationArea = SBXSBLawyer;
                         ToolTip = 'Specifies whether a annex with the detailed times and expenses is added to the invoice.';
@@ -459,7 +459,7 @@ page 50001 "DGF Sales Invoice Archive"
                     {
                         ShowCaption = false;
 
-                        field("SBX Memo"; Rec."SBX Memo")
+                        field("SBX Memo"; Rec."DGF Memo")
                         {
                             // Visible = bHideMemo;
                             Caption = 'Memo';
@@ -467,7 +467,7 @@ page 50001 "DGF Sales Invoice Archive"
                             // Importance = Additional;
                             ToolTip = 'Specifies whether a summary of billed services is added to the invoice.';
                         }
-                        field("SBX Hide Memo Tablix "; Rec."SBX Hide Memo Tablix")
+                        field("SBX Hide Memo Tablix "; Rec."DGF Hide Memo Tablix")
                         {
                             ApplicationArea = SBXSBLMemo;
                             Importance = Additional;
@@ -478,12 +478,12 @@ page 50001 "DGF Sales Invoice Archive"
                     group(SBXLedes)
                     {
                         Caption = 'LEDES';
-                        field("SBX Electronic Invoice "; Rec."SBX Electronic Invoice")
+                        field("SBX Electronic Invoice "; Rec."DGF Electronic Invoice")
                         {
                             ApplicationArea = SBXSBLawyer;
                             ToolTip = 'Specifies that the customer wants to receive an electronic invoice';
                         }
-                        field("SBX LEDES Format"; Rec."SBX LEDES Format")
+                        field("SBX LEDES Format"; Rec."DGF LEDES Format")
                         {
                             ApplicationArea = SBXSBLawyer;
                             ToolTip = 'Used to specify the version of LEDES format owned by the client';

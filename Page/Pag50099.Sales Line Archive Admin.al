@@ -117,14 +117,14 @@ page 50099 "DGF Sales Line Archive Admin"
                     ApplicationArea = SBXSBLawyer;
                 }
 
-                field("SBX Matter Entry Description"; Rec."SBX Matter Entry Description")
+                field("SBX Matter Entry Description"; Rec."DGF Matter Entry Description")
                 {
                     ApplicationArea = SBXSBLawyer;
                 }
 
 
 
-                field("SBX Planning Date"; Rec."SBX Planning Date")
+                field("SBX Planning Date"; Rec."DGF Planning Date")
                 {
                     ApplicationArea = SBXSBLawyer;
                 }
@@ -170,7 +170,7 @@ page 50099 "DGF Sales Line Archive Admin"
                     Visible = true;
                 }
 
-                field("SBX Sales Topic"; Rec."SBX Sales Topic")
+                field("SBX Sales Topic"; Rec."DGF Sales Topic")
                 {
                     ApplicationArea = SBXSBLawyer;
 
@@ -216,18 +216,18 @@ page 50099 "DGF Sales Line Archive Admin"
                     Visible = true;
                 }
 
-                field("SBX Source Entry Time"; Rec."SBX Source Entry Time")
+                field("SBX Source Entry Time"; Rec."DGF Source Entry Time")
                 {
                     ApplicationArea = SBXSBLawyer;
                     Visible = true;
 
                 }
-                field("SBX Entry Time"; Rec."SBX Entry Time")
+                field("SBX Entry Time"; Rec."DGF Entry Time")
                 {
                     ApplicationArea = SBXSBLawyer;
 
                 }
-                field("SBX Source Quantity"; Rec."SBX Source Quantity")
+                field("SBX Source Quantity"; Rec."DGF Source Quantity")
                 {
                     ApplicationArea = SBXSBLawyer;
 
@@ -293,52 +293,52 @@ page 50099 "DGF Sales Line Archive Admin"
                     Visible = true;
                 }
 
-                field("SBX Line Amount Adjusted"; Rec."SBX Line Amount Adjusted")
+                field("SBX Line Amount Adjusted"; Rec."DGF Line Amount Adjusted")
                 {
                     ApplicationArea = SBXSBLawyer;
 
                     Visible = true;
 
                 }
-                field("SBX Line Unit Price Adjustemen"; Rec."SBX Line Unit Price Adj")
+                field("SBX Line Unit Price Adjustemen"; Rec."DGF Line Unit Price Adj")
                 {
                     ApplicationArea = SBXSBLawyer;
 
                     Visible = true;
                 }
-                field("SBX Line Adjusted %"; Rec."SBX Line Adjusted %")
+                field("SBX Line Adjusted %"; Rec."DGF Line Adjusted %")
                 {
                     ApplicationArea = SBXSBLawyer;
 
                     Visible = true;
 
                 }
-                field("SBX Total Line Amount Adjusted"; Rec."SBX Total Line Amount Adjusted")
+                field("SBX Total Line Amount Adjusted"; Rec."DGF Total Line Amount Adjusted")
                 {
                     ApplicationArea = SBXSBLawyer;
                     Visible = true;
 
                 }
-                field("SBX Write Off"; Rec."SBX Write Off")
+                field("SBX Write Off"; Rec."DGF Write Off")
                 {
                     ApplicationArea = SBXSBLawyer;
                     ToolTip = 'Specify the line to write off.';
 
                 }
-                field("SBX Postpone"; Rec."SBX Postpone")
+                field("SBX Postpone"; Rec."DGF Postpone")
                 {
                     ApplicationArea = SBXSBLawyer;
                     ToolTip = 'Specify the line to postpone, that is to say the lines to send back to WIP.';
 
 
                 }
-                field("SBX Transfer"; Rec."SBX Transfer")
+                field("SBX Transfer"; Rec."DGF Transfer")
                 {
 
                     ApplicationArea = SBXSBLawyer;
                     ToolTip = 'Specify the line to transfert to another matter.Before transfering, all the lines have to be ticked.';
                 }
-                field("SBX Cost Switch Service"; Rec."SBX Cost Switch Service")
+                field("SBX Cost Switch Service"; Rec."DGF Cost Switch Service")
                 {
                     ApplicationArea = SBXSBLawyer;
                     ToolTip = 'Specify the line to invoice as service fees';
@@ -387,32 +387,32 @@ page 50099 "DGF Sales Line Archive Admin"
                 {
                     Visible = true;
                 }
-                field("SBX Matter No."; Rec."SBX Matter No.")
+                field("SBX Matter No."; Rec."DGF Matter No.")
                 {
                     ApplicationArea = SBXSBLawyer;
                 }
-                field("SBX Matter Line No."; Rec."SBX Matter Line No.")
+                field("SBX Matter Line No."; Rec."DGF Matter Line No.")
                 {
                     ApplicationArea = SBXSBLawyer;
                 }
 
-                field("SBX Matter Entry Type"; Rec."SBX Matter Entry Type")
+                field("SBX Matter Entry Type"; Rec."DGF Matter Entry Type")
                 {
                     ApplicationArea = SBXSBLawyer;
                     Editable = true;
                 }
-                field("SBX Matter Ledger Entry No."; Rec."SBX Matter Ledger Entry No.")
+                field("SBX Matter Ledger Entry No."; Rec."DGF Matter Ledger Entry No.")
                 {
                     ApplicationArea = SBXSBLawyer;
                     Visible = true;
                     Editable = true;
                 }
-                field("SBX Nature Code"; Rec."SBX Nature Code")
+                field("SBX Nature Code"; Rec."DGF Nature Code")
                 {
                     ApplicationArea = SBXSBLawyer;
                 }
 
-                field("SBX Reference Amount"; Rec."SBX Reference Amount")
+                field("SBX Reference Amount"; Rec."DGF Reference Amount")
                 {
                     ApplicationArea = SBXSBLawyer;
                 }

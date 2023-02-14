@@ -15,13 +15,13 @@ pageextension 50102 "DGF Associate Profile RC" extends "SBX Associate Role Cente
 
         addbefore(Control1000000025)
         {
-            part(NewCustomer; "DGF New Customers List")
+            part(DGFNewCustomer; "DGF New Customers List")
             {
                 Caption = 'Nouveaux Clients';
                 ApplicationArea = SBXSBLawyer;
             }
 
-            part(NewMatters; "DGF New Matters List")
+            part(DGFNewMatters; "DGF New Matters List")
             {
                 Caption = 'Nouveaux Dossiers';
                 ApplicationArea = SBXSBLawyer;

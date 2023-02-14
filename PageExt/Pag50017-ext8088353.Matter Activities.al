@@ -5,7 +5,7 @@ pageextension 50017 "DGF Matter Activites" extends "SBX Matter Activities"
 
         addbefore("Customers - Blocked")
         {
-            field("Cust. Prospect Status"; Rec."DGF Cust. Prospect Status")
+            field("DGF Cust. Prospect Status"; Rec."DGF Cust. Prospect Status")
             {
                 // Caption = 'Customers Blocked';
                 ApplicationArea = SBXSBlawyer;
@@ -21,12 +21,12 @@ pageextension 50017 "DGF Matter Activites" extends "SBX Matter Activities"
         }
         addfirst(MatterMgtGrp)
         {
-            field("Matter Creation Step"; Rec."Matter Creation Step")
+            field("DGF Matter Creation Step"; Rec."DGF Matter Creation Step")
             {
                 ApplicationArea = SBXSBlawyer;
                 DrillDownPageId = "SBX Matters List";
             }
-            field("Matter Prospection Step"; Rec."Matter Prospection Step")
+            field("DGF Matter Prospection Step"; Rec."DGF Matter Prospection Step")
             {
                 ApplicationArea = SBXSBlawyer;
                 DrillDownPageId = "SBX Matters List";

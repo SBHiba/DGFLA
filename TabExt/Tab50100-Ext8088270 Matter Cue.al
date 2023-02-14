@@ -4,12 +4,12 @@ tableextension 50100 "DGF Matter Cue" extends "SBX Matter Cue"
     {
         field(50000; "DGF Cust. Prospect Status"; Integer)
         {
-            CalcFormula = Count(Customer where(Status = filter('Prospect'), "Account Manager" = field(filter("Partner No. Filter"))));
+            CalcFormula = Count(Customer where("DGF Status" = filter('Prospect'), "DGF Account Manager" = field(filter("Partner No. Filter"))));
             Caption = 'Clients - Prospect';
             FieldClass = FlowField;
         }
 
-        field(50001; "Matter Creation Step"; Integer)
+        field(50001; "DGF Matter Creation Step"; Integer)
         {
             CalcFormula = Count("SBX Matter Header" where("SBX Doc Step Name" = filter('Création'),
                                                         "Partner No." = field(FILTER("Partner No. Filter")),
@@ -20,7 +20,7 @@ tableextension 50100 "DGF Matter Cue" extends "SBX Matter Cue"
             Caption = 'Dossiers - Création';
             FieldClass = FlowField;
         }
-        field(50002; "Matter Prospection Step"; Integer)
+        field(50002; "DGF Matter Prospection Step"; Integer)
         {
             CalcFormula = Count("SBX Matter Header" where("SBX Doc Step Name" = filter('Prospection'), "Partner No." = field(FILTER("Partner No. Filter")),
                                                        "Responsible No." = field(FILTER("Responsible No. Filter")),

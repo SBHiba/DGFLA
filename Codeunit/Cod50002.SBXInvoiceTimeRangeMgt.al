@@ -10,17 +10,17 @@ codeunit 50002 "DGF Invoice Time Range Mgt."
         MatterHeader: Record "SBX Matter Header";
     begin
         MatterHeader.get(MatterNo);
-        with SalesLine do begin
-            Clear(cuMatterTimeMgt_g);
-            recExpenseSetup_g.Get;
+        //with SalesLine do begin
+        Clear(cuMatterTimeMgt_g);
+        recExpenseSetup_g.Get;
 
-            cuMatterTimeMgt_g.SliceRoundingUnit(MatterHeader."Inv. Time Range (min)", MatterHeader."Inv. Rounding Range (min)".AsInteger());
-            validate(Quantity, cuMatterTimeMgt_g.CalcTimeDeltaFactor("SBX Entry Time", "Unit of Measure Code"));
-            // "Quantity (Base)" := CalcBaseQty1(Quantity);
+        cuMatterTimeMgt_g.SliceRoundingUnit(MatterHeader."DGF Inv. Time Range (min)", MatterHeader."DGF Inv. Rounding Range (min)".AsInteger());
+        SalesLine.validate(Quantity, cuMatterTimeMgt_g.CalcTimeDeltaFactor(SalesLine."SBX Entry Time", SalesLine."Unit of Measure Code"));
+        // "Quantity (Base)" := CalcBaseQty1(Quantity);
 
-            Modify();
-            UpdateAmounts;
-        end;
+        SalesLine.Modify();
+        SalesLine.UpdateAmounts;
+        //end;
     end;
 
     local procedure CalcBaseQty1(Qty: Decimal): Decimal

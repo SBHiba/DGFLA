@@ -4,13 +4,13 @@ pageextension 50003 "DGF Customer Card" extends "Customer Card"
     {
         addafter("Name 2")
         {
-            field(Status; Rec.Status)
+            field(DGFStatus; Rec."DGF Status")
             {
                 ApplicationArea = SBXSBLawyer;
                 Caption = 'Statut';
                 ShowMandatory = true;
             }
-            field(Confidential; Rec.Confidential)
+            field(DGFConfidential; Rec."DGF Confidential")
             {
                 ApplicationArea = SBXSBLawyer;
                 Caption = 'Confidentiel';
@@ -37,7 +37,7 @@ pageextension 50003 "DGF Customer Card" extends "Customer Card"
 
         addafter("Salesperson Code")
         {
-            field("Account Manager"; Rec."Account Manager")
+            field("Account Manager"; Rec."DGF Account Manager")
             {
                 ApplicationArea = SBXSBLawyer;
             }

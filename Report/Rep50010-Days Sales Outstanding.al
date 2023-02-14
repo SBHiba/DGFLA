@@ -8,7 +8,7 @@ FontColour3 = 'DimGray'
 
 end comment */
 
-report 50010 "Days Sales Outstanding"
+report 50010 "DGF Days Sales Outstanding"
 {
     ApplicationArea = All;
     Caption = 'Days Sales Outstanding by Customer';
@@ -45,7 +45,7 @@ report 50010 "Days Sales Outstanding"
             {
                 IncludeCaption = true;
             }
-            column(AccountManager_Customer; "Account Manager")
+            column(AccountManager_Customer; "DGF Account Manager")
             { }
             column(GenBusPostingGroup_Customer; "Gen. Bus. Posting Group")
             { }

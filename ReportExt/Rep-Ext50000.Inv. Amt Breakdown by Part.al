@@ -1,4 +1,4 @@
-reportextension 50000 "Inv. Amt Breakdown by Part." extends "SBX Inv. Amt Brkdwn by Matter"
+reportextension 50000 "DG Inv. Amt Breakdown by Part." extends "SBX Inv. Amt Brkdwn by Matter"
 {
     dataset
     {

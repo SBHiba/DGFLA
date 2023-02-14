@@ -1,14 +1,14 @@
-pageextension 50016 "DGFLA Resource Card" extends "Resource Card"
+pageextension 50016 "DGF Resource Card" extends "Resource Card"
 {
     layout
     {
         addlast("SBX SBL TimekeeperGrp")
         {
-            field("DGFLA Division"; Rec."DGFLA Division")
+            field("DGF Division"; Rec."DGF Division")
             {
                 ApplicationArea = All;
             }
-            field("DGFLA Seniority"; Rec."DGFLA Seniority")
+            field("DGF Seniority"; Rec."DGF Seniority")
             {
                 ApplicationArea = All;
             }
@@ -19,7 +19,7 @@ pageextension 50016 "DGFLA Resource Card" extends "Resource Card"
     {
         addfirst(reporting)
         {
-            action(RunRepDetForecastView_DGFLA)
+            action(DGFRunRepDetForecastView_DGFLA)
             {
                 ApplicationArea = SBXSBLawyer;
                 Caption = 'Details Lawyer Forecast View';
