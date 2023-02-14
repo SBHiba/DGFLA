@@ -182,6 +182,4 @@ codeunit 50000 "DGF Event Handler"
             ExpenseLedgerEntry."Approval Status" := ExpenseLedgerEntry."Approval Status"::Approved;
     end;
     //<<Double Approval Github #26 #27 - Hiba 13/02
-
-
 }
